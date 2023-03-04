@@ -1,0 +1,810 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"); /* Quicksand */
+/* Import Font */
+
+/* Keyframe Section */
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(180);
+  }
+  50% {
+    transform: rotate(270);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes shadowshake {
+  0% {
+    text-shadow: 2px 2px 5px rgba(255,0,0,1);
+  }
+  25% {
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+  }
+  50% {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+  75% {
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+  }
+  100% {
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  }
+}
+
+/* Penutup Keyframe */
+
+/* All page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand";
+  overflow-x: visible;
+  scroll-behavior: smooth; /* Buat Smooth ketika di scroll*/
+}
+
+body {
+  overflow-x: hidden;
+}
+/*Penutup All Page*/
+
+/*Animasi Pop Up*/
+.reveal
+{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.reveal.active
+{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/*Penutup Animasi Pop Up*/
+
+/*Animasi Membesar*/
+.revealMembesar
+{
+  scale: 0;
+  transition: all 0.5s ease;
+}
+
+.revealMembesar.active
+{
+  scale: 1;
+}
+/*Penutup Animasi Membesar*/
+
+/* Bagian Header */
+header {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  /* #161A1D */
+  position: fixed;
+  display: flex;
+  z-index: 999;
+  transition: all 0.7s ease;
+}
+
+header.sticky
+{
+  height: 95px;
+  background: rgba(22, 22, 29, 0.95);
+  box-shadow: 1px 1px 6px rgba(253, 132, 31, 0.4);
+}
+
+/* Navigasi */
+nav {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+}
+
+/* Navigasi Kiri Utama */
+nav .nav_kiri a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Navigasi Kiri IMG */
+nav .nav_kiri img {
+  width: 45px;
+  margin-right: 20px;
+}
+
+/* Navigasi Kiri H1 */
+nav .nav_kiri h1 {
+  font-size: 20pt;
+  color: white;
+}
+
+/* Navigasi Kiri H1 HOVER*/
+nav .nav_kiri:hover h1 {
+  font-weight: bold;
+}
+
+/* Navigasi Kanan Utama / UL */
+nav .nav_kanan {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+
+/* Navigasi Kanan LI */
+nav .nav_kanan li {
+  padding: 7px 7px 7px 7px;
+  border-radius: 20px;
+  width: 120px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+/* Navigasi Kanan Tulisan A */
+nav .nav_kanan li a {
+  font-size: 13pt;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav .nav_kanan li a:hover {
+  color: #FD841F;
+}
+
+.contactMe
+{
+  border: 2px solid #FD841F;
+}
+
+.section_home
+{
+  width: 100%;
+  height: 650px;
+  background: lightgray;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/*Home Section*/
+
+.section_home{
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  animation: rotate 3s infinite;
+/*  width: 1350px;*/
+  background-image: url(img/backgroundtest.jpeg);
+}
+
+.learn
+{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background: #FD841F;
+  box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.25);
+}
+
+.content-kiri{
+  margin-top: 15%;
+  margin-left: 12%;
+}
+
+.icon-home{
+  width: 350px;
+  margin-top: 40%;
+  margin-left: 50%;
+  animation: shake 3s infinite;
+}
+
+.preview-project
+{
+  margin-top: 10%;
+  display: flex;
+  width: auto;
+}
+
+.android,
+.database,
+.website
+{
+  display: flex;
+}
+
+.icon-android,
+.icon-database,
+.icon-website
+{
+  width: 50px;
+  height: 50px;
+}
+
+.icon-database,
+.icon-website
+{
+  margin-left: 20px;
+}
+
+/*Penutup Home Section*/
+
+/*About Section*/
+
+.section_about{
+/*  width: 1350px;*/
+  width: 100%;
+  max-width: 1500px;
+  height: 500px;
+  background: #FD841F;
+  display: flex;
+  margin: 0 auto;
+}
+
+.detail-about{
+  margin-top: 6%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.img-about{
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.img-me{
+  width: 300px;
+  background: #161A1D;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.sosmed{
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.sosmed a{
+  margin-left: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+.sosmed a:hover{
+  color: #161A1D;
+}
+
+/*Penutup About Section*/
+
+/*Skill Section*/
+.container-skill{
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #181824;
+  animation: shadowshake 3s infinite;
+}
+
+.container-skill .section_skill {
+  padding-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-spek {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 50px;
+  padding-bottom: 80px;
+  text-align: left;
+}
+
+.container-skill .section_skill .skill-spek .skill img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-spek h4, .skill-spek p {
+  margin-top: 10px;
+  color: white;
+}
+
+/*Penutup Skill Section*/
+
+/*Project Section*/
+.container-projects{
+  padding-bottom: 80px;
+}
+
+.container-projects .section_projects{
+  padding-top: 30px;
+  background: white;
+  width: 100%;
+  margin:0 auto;
+  max-width: 1500px;
+  height: 100% auto;
+  text-align: center;
+}
+
+.judul{
+  padding-top: 5%;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.projects-detail{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.informasi-project{
+  background: whitesmoke;
+  width: 100%;
+  color: black;
+  text-align: justify;
+  padding: 25px 10px 10px 10px;
+  border-radius: 2px;
+}
+
+.informasi-project a{
+  text-align: right;
+}
+
+.card-project{
+  width: 100%;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project {
+  width: 90%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: black;
+  border-radius: 17px;
+  text-align: left;
+  box-shadow: 10px 8px 1px rgba(228, 121, 32, 0.2);
+  transition: 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  animation: shake 3s infinite;
+}
+
+.project:nth-child(4) , .project:nth-child(5) {
+  margin-top: 40px;
+}
+
+.project:hover {
+  scale: 1.01;
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+.projects-detail .project h3 {
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.projects-detail .project p {
+  color: #7D9FAF;
+  padding: 15px;
+}
+
+.projects-detail .project .gambar-project {
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.projects-detail .project .uselang img {
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+/*Penutup Project Section*/
+
+/*Contact Section*/
+.container-contact{
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  height: 100%;
+  background-image: url(img/backgroundcontact.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.container-contact .section_contact{
+  display: flex;
+}
+
+.whatsapp, .facebook, .gmail, .github{
+  display: flex;
+  font-size: 4em;
+  color: #161A1D;
+  border-bottom: 2px solid black;
+}
+
+.informasi-contact, .send{
+  background: whitesmoke;
+  margin-left: 5%;
+  padding: 3%;
+  border-radius: 2%;
+}
+
+.whatsapp a, .facebook a, .gmail a, .github a{
+  color: #161A1D;
+  transition: all 0.3s ease;
+}
+
+.whatsapp a:hover, .facebook a:hover, .gmail a:hover, .github a:hover{
+  color: #FD841F;
+}
+
+.whatsapp h1, .facebook h1, .gmail h1, .github h1{
+  font-size: 24px;
+  height: 100%;
+  margin-left: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.send form .nama, .email, .telp, textarea{
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  color: #161A1D;
+}
+
+.send textarea{
+  height: 150px;
+}
+
+.submit{
+  width: 200px;
+  padding: 10px;
+  align-items: left;
+  color: #161A1D;
+  background: #FD841F;
+  border-radius: 8px;
+  border: 0px solid black;
+  transition: all 0.3s ease;
+}
+
+.submit:hover{
+  width: 300px;
+}
+
+/*Penutup Contact Section*/
+
+/*Footer*/
+
+footer{
+/*  width: 1350px;*/
+width: 100%;
+max-width: 1500px;
+margin: 0 auto;
+height: 80px;
+background: #161A1D;
+/*background: #FD841F;*/
+color: white;
+}
+
+footer p{
+  text-align: center;
+  padding-top: 15px;
+}
+
+/*Penutup Footer*/
+
+/*Responsive*/
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #FD841F;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  background-color: #FD841F;
+  /*background-color: darkred;*/
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  background-color: #FD841F;
+  /*background-color: darkred;*/
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+/*Penutup Humberger*/
+
+
+/*Responsive Breakpoint*/
+
+@media screen and (max-width: 1200px) {
+  .icon-home{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detail-about{
+    margin-top: 6%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 1000px) {
+  nav ul {
+    width: 50%;
+  }
+
+  .icon-home{
+    visibility: hidden;
+    display: none;
+  }
+
+  .section_home .content-kiri{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
+  }
+
+  .section_about{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align-last: center;
+  }
+
+  .projects-detail{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailtext-about{
+    text-align: justify;
+  }
+
+  .img-about{
+    width: auto;
+    position: relative;
+  }
+
+  .sosmed{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-contact .section_contact{
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .whatsapp, .facebook, .gmail, .github{
+    display: block;
+  }
+
+  .informasi-contact, .send{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skill-spek {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    padding: 10px;
+    right: 0px;
+    width: 100%;
+    height: 60vh;
+    top: 89%;
+    margin-top: 19%;
+    border-bottom-left-radius: 10px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .section_home .content-kiri{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35%;
+  }
+
+  .preview-project{
+    margin-top: 30%;
+  }
+
+  .section_about{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align-last: center;
+  }
+
+  .detailtext-about{
+    text-align: justify;
+  }
+
+  .img-about{
+    margin-left: 15%;
+  }
+
+  .sosmed{
+    margin-left: auto;
+    margin-right: 8%;
+  }
+
+  .judul{
+    padding-top: 10%;
+  }
+
+  td{
+    width: 100%;
+    max-width: 667px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+
+  .whatsapp h1, .facebook h1, .gmail h1, .github h1{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .send form .nama, .email, .telp, textarea{
+    margin: 10px;
+    padding: 10px;
+    max-width: 240px;
+    color: #161A1D;
+  }
+
+  .android-language, .database-language, .website-language{
+    display: block;
+    border-bottom: 4px solid #161A1D;
+  }
+
+  .android-language h1, .database-language h1, .website-language h1{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .android-language a, .database-language a, .website-language a{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects-detail{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .projects-detail .project {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skill-spek {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .judul {
+    font-size: 32px;
+    margin-bottom: 10%;
+  }
+
+}
